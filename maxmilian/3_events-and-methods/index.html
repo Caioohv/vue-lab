@@ -19,6 +19,9 @@
       <button v-on:click="increment(5)">Add</button>
       <button v-on:click="decrement(5)">Remove</button>
       <p>Result: {{ counter }}</p>
+      <!-- in this case, without using (), the browser passes 'event' by default -->
+      <input type="text" v-on:input="setName">
+      <p>Your name: {{ name }}</p>
     </section>
     <script src="app.js"></script>
   </body>
