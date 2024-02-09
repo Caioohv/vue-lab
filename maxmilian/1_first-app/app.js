@@ -22,11 +22,14 @@ Vue.createApp({
   data() {
     return {
       goals: [],
-      enteredValue: ''
+      enteredValue: '',
+      vueLink: 'https://vuejs.org/',
+      markup: '<h2>Vue JS</h2>'
     }
   },
   methods: {
     addGoal() {
+      if(this.enteredValue === '') return
       this.goals.push(this.enteredValue)
       this.enteredValue = ''
     }

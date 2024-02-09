@@ -4,19 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A First App</title>
+    <link href='https://fonts.googleapis.com/css?family=Jost' rel='stylesheet'>
     <link rel="stylesheet" href="styles.css" />
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   </head>
   <body>
     <div id="app">
-      <div>
+      <header>
+        <p v-html="markup"></p>
+      </header>
+      <section id="user-goal">
         <label for="goal">Goal</label>
         <input type="text" id="goal" v-model="enteredValue"/>
         <button v-on:click="addGoal()">Add Goal</button>
-      </div>
+      </section>
       <ul>
         <li v-for="goal in goals">{{ goal }}</li>
       </ul>
+      <p>Learn more about <a v-bind:href="vueLink"> Vue!</a></p>
     </div>
     <script src="app.js"></script>
   </body>

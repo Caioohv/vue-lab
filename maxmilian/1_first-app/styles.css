@@ -1,4 +1,4 @@
-* {
+z* {
   box-sizing: border-box;
 }
 
@@ -17,10 +17,68 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
 }
 
-label, input {
-  margin-bottom: 0.5rem;
+#app header {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  margin: 3rem auto;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: #4fc08d;
+  color: white;
+  text-align: center;
+  width: 90%;
+  max-width: 40rem;
+}
+
+#user-goal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  margin: 3rem auto;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  width: 90%;
+  max-width: 40rem;
+}
+
+#user-goal label {
+  font-family: 'Jost';
+  font-size: 24px;
+  font-weight: 600;
+  color: #4fc08d;
+
+}
+
+#user-goal input {
+  font-family: 'Jost';
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  color: #4fc08d;
+  border: 1px solid #4fc08d;
+  border-radius: 7px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#user-goal button {
+  font-family: 'Jost';
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  color: #4fc08d;
+  border: 1px solid #4fc08d;
+  border-radius: 7px;
+  padding: 0.5rem;
+  width: 30%;
+  margin-bottom: 1rem;
+  align-self: center;
+}
+
+label, input, button {
   display: block;
-  width: 100%;
+  margin: 12px;
 }
 
 label {
@@ -37,4 +95,17 @@ li {
   margin: 1rem 0;
   padding: 1rem;
   border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: 0 40px 0 40px
+}
+
+#app p {
+  text-align: center;
+  font-family: 'Jost';
+
+}
+
+#app a {
+  color: #4fc08d;
+  text-decoration: none;
 }
