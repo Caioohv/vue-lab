@@ -21,6 +21,7 @@
       <!-- only trigger with right click -->
       <button v-on:click.right="decrement(5)">Remove</button>
       <p>Result: {{ counter }}</p>
+      <p v-once>Starting counter: {{ counter }}</p>
 
       <!-- in this case, without using (), the browser passes 'event' by default -->
       <input type="text" v-on:input="setName($event, `Vieira`)" v-on:keyup.enter="confirmInput">
