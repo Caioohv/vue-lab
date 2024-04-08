@@ -19,6 +19,15 @@ const app = Vue.createApp({
     clearInput(){
       this.name = '';
     }
+  },
+  // computed properties are cached based on their dependencies
+  computed: {
+    fullName() {
+      if(this.name === ''){
+        return '';  
+      }
+      return this.name + ' Vieira'
+    }
   }
 });
 
