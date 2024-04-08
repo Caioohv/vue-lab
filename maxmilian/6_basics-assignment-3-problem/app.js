@@ -12,27 +12,24 @@ const app = Vue.createApp({
   },
   computed: {
     textComputed(){
-      return this.text
+      if(this.counter < 37)
+        return 'Not there yet'
+
+      if(this.counter == 37) 
+        return `Exactly!`
+
+      if(this.counter > 37){
+        return 'Too much!'
+      }
     },
   },
   watch: {
-    counter(){
-      if(this.counter < 37)
-        this.text = 'Not there yet'
-
-      if(this.counter == 37) 
-        this.text = `Exactly!`
-
+    textComputed(){
       if(this.counter > 37){
-        this.text = 'Too much!'
-        const that = this;
         setTimeout(()=>{
           that.counter = 0
         }, 5000)
       }
-        
-
-      
     }
   }
 });
