@@ -2,7 +2,9 @@ const app = Vue.createApp({
   data() {
     return {
       counter: 0,
-      name: ''
+      name: '',
+      lastName: '',
+      // fullname: ''
     };
   },
   methods: {
@@ -18,16 +20,35 @@ const app = Vue.createApp({
     },
     clearInput(){
       this.name = '';
+      this.lastName = '';
     }
   },
   // computed properties are cached based on their dependencies
   computed: {
-    fullName() {
-      if(this.name === ''){
-        return '';  
+    fullname() {
+      if(this.name === '' || this.lastName === ''){
+        return '';
       }
-      return this.name + ' Vieira'
+      return this.name + ' ' + this.lastName;
     }
+  },
+  // watch properties are not cached
+  watch: {
+    // will be used automatically when name changes
+    // name(value){
+    //   if(value === ''){
+    //     this.fullname = '';
+    //   }else{
+    //     this.fullname = value + ' ' + this.lastName;
+    //   }
+    // },
+    // lastName(value){
+    //   if(value === ''){
+    //     this.fullname = '';
+    //   }else{
+    //     this.fullname = this.name + ' ' + value;
+    //   }
+    // }
   }
 });
 
